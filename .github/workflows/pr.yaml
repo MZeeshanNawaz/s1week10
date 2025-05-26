@@ -1,15 +1,23 @@
 name: pr-validation-ef
+
 on:
-   pull_request:
-     types:
-       -  opened
-       - synchronize
-   push:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+  push:
     branches:
       - develop
+
 jobs:
-     pr-validation-job:
-      runs-on: ubuntu-latest
-      steps:
-        - name: welcom steps
-          run: echo "Welcom to github actions" 
+  pr-validation-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: welcome steps
+        run: echo "Welcome to GitHub Actions"
+
+  second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: First step job 2
+        run: echo "This is the first step of second-job"
